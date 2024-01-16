@@ -7,16 +7,18 @@ use Illuminate\Http\Request;
 class MyController extends Controller
 {
     private $myvar = "Hello World!";
-    function _construct(){
+
+    function __construct() //MyController
+    {
 
     }
+
     public function index(){
-    //     $data=['val_a' => 'Hello World!'];
-    //     $data['val_b'] = " Laravel";
-    //    return view('myfolder.mypage',$data);
-        return view('myfolder.home');
+        return view('home');
     }
-    public function store(Request $req){
 
+    public function store(Request $req){
+        $data['myinput'] = $req->input('myinput');
+        return view('myroute', $data);
     }
 }
