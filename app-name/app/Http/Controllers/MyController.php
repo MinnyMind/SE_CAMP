@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\C_titles;
 use App\Http\Controllers\MyAuth;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes

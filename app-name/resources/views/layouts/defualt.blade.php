@@ -8,11 +8,11 @@
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
-        href="{{ url('assets/plugins/jquery/jquery.min.js') }}">
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="{{ url('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}">
+    <link rel="stylesheet" href="{{ url('assets/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{ url('assets/dist/js/adminlte.min.js') }}">
+    <link rel="stylesheet" href="{{ url('assets/dist/css/adminlte.min.css') }}">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -181,7 +181,7 @@
                             alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Alexander Pierce</a>
+                        <a href="#" class="d-block">{{ Auth::user()->name }}</a>
                     </div>
                 </div>
 
@@ -240,8 +240,13 @@
                 </nav>
                 <!-- /.sidebar-menu -->
             </div>
-            <!-- /.sidebar -->
-        </aside>
+<!-- /.sidebar -->
+<div class="container">
+    <a href="login" class="btn btn-info btn-m" style="position: absolute; bottom: 15px; left: 10px;">
+        <span class="glyphicon glyphicon-log-out"></span> Log out
+    </a>
+</div>
+</aside>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -270,6 +275,7 @@
             reserved.
         </footer>
     </div>
+
     <!-- ./wrapper -->
 
     <!-- REQUIRED SCRIPTS -->

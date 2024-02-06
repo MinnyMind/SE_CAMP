@@ -181,7 +181,7 @@
                             alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Alexander Pierce</a>
+                        <a href="#" class="d-block"><?php echo e(Auth::user()->name); ?></a>
                     </div>
                 </div>
 
@@ -240,8 +240,13 @@
                 </nav>
                 <!-- /.sidebar-menu -->
             </div>
-            <!-- /.sidebar -->
-        </aside>
+<!-- /.sidebar -->
+<div class="container">
+    <a href="login" class="btn btn-info btn-m" style="position: absolute; bottom: 15px; left: 10px;">
+        <span class="glyphicon glyphicon-log-out"></span> Log out
+    </a>
+</div>
+</aside>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -270,6 +275,7 @@
             reserved.
         </footer>
     </div>
+
     <!-- ./wrapper -->
 
     <!-- REQUIRED SCRIPTS -->
