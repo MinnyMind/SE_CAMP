@@ -26,6 +26,10 @@ use App\Model\User;
 
 // Route::resource('/my-controller4', MyController::class);
 
+Route::get('/multiplication', function(){
+    return view('titles.multiplication');
+});
+
 Route::get('/login',[MyAuth::class,'login_view'])->name('login');
 Route::get('/register',[MyAuth::class,'register_view']);
 Route::get('/logout',[MyAuth::class,'logout_process']);

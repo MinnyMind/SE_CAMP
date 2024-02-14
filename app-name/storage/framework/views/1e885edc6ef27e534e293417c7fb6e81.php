@@ -11,6 +11,8 @@
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="<?php echo e(url('assets/plugins/fontawesome-free/css/all.min.css')); ?>">
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="<?php echo e(url('assets/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css')); ?>">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?php echo e(url('assets/dist/css/adminlte.min.css')); ?>">
 </head>
@@ -27,10 +29,11 @@
                             class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="index3.html" class="nav-link">Home</a>
+                    <a href="/titles" class="nav-link">SE CAMP</a>
                 </li>
+                
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Contact</a>
+                    <a href="/multiplication" class="nav-link">Multiplication</a>
                 </li>
             </ul>
 
@@ -154,9 +157,10 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"
-                        role="button">
-                        <i class="fas fa-th-large"></i>
+
+                    <a class="nav-link" data-slide="true" href="/logout" role="button">
+                        <i class="fas fa-sign-out-alt"></i>
+                        
                     </a>
                 </li>
             </ul>
@@ -181,7 +185,7 @@
                             alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block"><?php echo e(Auth::user()->name); ?></a>
+                        <a href="#" class="d-block">Alexander Pierce</a>
                     </div>
                 </div>
 
@@ -240,13 +244,8 @@
                 </nav>
                 <!-- /.sidebar-menu -->
             </div>
-<!-- /.sidebar -->
-<div class="container">
-    <a href="login" class="btn btn-info btn-m" style="position: absolute; bottom: 15px; left: 10px;">
-        <span class="glyphicon glyphicon-log-out"></span> Log out
-    </a>
-</div>
-</aside>
+            <!-- /.sidebar -->
+        </aside>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -275,7 +274,6 @@
             reserved.
         </footer>
     </div>
-
     <!-- ./wrapper -->
 
     <!-- REQUIRED SCRIPTS -->
@@ -284,8 +282,11 @@
     <script src="<?php echo e(url('assets/plugins/jquery/jquery.min.js')); ?>"></script>
     <!-- Bootstrap 4 -->
     <script src="<?php echo e(url('assets/plugins/bootstrap/js/bootstrap.bundle.min.js')); ?>"></script>
+    <!-- SweetAlert2 -->
+    <script src="<?php echo e(url('assets/plugins/sweetalert2/sweetalert2.min.js')); ?>"></script>
     <!-- AdminLTE App -->
     <script src="<?php echo e(url('assets/dist/js/adminlte.min.js')); ?>"></script>
+    <?php echo $__env->yieldContent('js'); ?>
 </body>
 
 </html>
